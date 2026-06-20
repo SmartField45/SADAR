@@ -1,0 +1,151 @@
+[gd_scene format=3 uid="uid://ccg0mgeb3rot1"]
+
+[ext_resource type="Script" uid="uid://cgi2h87y8s7ds" path="res://Scripts/Levels/tutorial.gd" id="1_l7elp"]
+[ext_resource type="FontFile" uid="uid://duq68hb7m6ngs" path="res://Fonts/PixelOperator.ttf" id="2_fenkg"]
+[ext_resource type="FontFile" uid="uid://c7e0hc7nwg81l" path="res://Fonts/PixelOperatorMono8-Bold.ttf" id="3_302wg"]
+[ext_resource type="PackedScene" uid="uid://bmornacepo3on" path="res://Scenes/Character/lex.tscn" id="4_fenkg"]
+[ext_resource type="Script" uid="uid://d2ofrfw3xskrp" path="res://Scripts/Dialogs/ClickableObject.gd" id="5_idsh5"]
+[ext_resource type="Texture2D" uid="uid://yj1bbhd3ffhl" path="res://Assets/Sprite/Phone/Phone_001.png" id="6_mhlsa"]
+[ext_resource type="Texture2D" uid="uid://byceu3o63qwx8" path="res://Assets/Sprite/Backpack/Backpack_001.png" id="7_mhlsa"]
+[ext_resource type="AudioStream" uid="uid://b2hab4fwl52cu" path="res://Audio/Music/Conexhon - Where We Begin.mp3" id="8_l2k66"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_emxf8"]
+bg_color = Color(0.6506471, 0.32905662, 0.10071824, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_idsh5"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(1, 1, 1, 1)
+expand_margin_left = 8.0
+expand_margin_top = 8.0
+expand_margin_right = 8.0
+expand_margin_bottom = 8.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mhlsa"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(1, 1, 1, 1)
+expand_margin_left = 8.0
+expand_margin_top = 8.0
+expand_margin_right = 8.0
+expand_margin_bottom = 8.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_l2k66"]
+radius = 78.40918
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_tospq"]
+radius = 101.71037
+
+[node name="Tutorial" type="Node2D" unique_id=1941520053]
+script = ExtResource("1_l7elp")
+
+[node name="Panel" type="Panel" parent="." unique_id=886301338]
+z_index = -5
+theme_override_styles/panel = SubResource("StyleBoxFlat_emxf8")
+
+[node name="UI" type="CanvasLayer" parent="." unique_id=696003718]
+layer = -1
+
+[node name="InvestigateHint" type="Label" parent="UI" unique_id=1028161135]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -40.0
+offset_bottom = 23.0
+grow_horizontal = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("2_fenkg")
+theme_override_font_sizes/font_size = 24
+
+[node name="ConfrontButton" type="Button" parent="UI" unique_id=1610117647]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -612.0
+offset_top = 22.0
+offset_right = -428.0
+offset_bottom = 46.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_302wg")
+theme_override_styles/normal = SubResource("StyleBoxFlat_idsh5")
+theme_override_styles/hover = SubResource("StyleBoxFlat_mhlsa")
+text = "CONFRONT"
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1074659565]
+z_index = -1
+anchors_preset = -1
+anchor_right = 0.031000001
+anchor_bottom = 0.101
+offset_left = 338.0
+offset_top = 274.0
+offset_right = 338.32
+offset_bottom = 241.28
+texture = ExtResource("6_mhlsa")
+stretch_mode = 2
+
+[node name="TextureRect2" type="TextureRect" parent="." unique_id=1828287541]
+z_index = -1
+anchors_preset = -1
+anchor_right = 0.031000001
+anchor_bottom = 0.101
+offset_left = 761.0
+offset_top = 360.0
+offset_right = 761.32
+offset_bottom = 327.28
+scale = Vector2(4, 4)
+texture = ExtResource("7_mhlsa")
+stretch_mode = 2
+
+[node name="TutHP" type="Area2D" parent="." unique_id=1523281406]
+z_index = 4096
+script = ExtResource("5_idsh5")
+object_id = "hp2"
+dialog_key = "tut_hp"
+gives_evidence = true
+evidence_id = "HP_TUT"
+evidence_name = "HP"
+evidence_desc = "HP"
+evidence_icon = ExtResource("6_mhlsa")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TutHP" unique_id=1291745228]
+z_index = 4096
+position = Vector2(348, 294)
+shape = SubResource("CircleShape2D_l2k66")
+
+[node name="TutTas" type="Area2D" parent="." unique_id=707949636]
+z_index = 4096
+script = ExtResource("5_idsh5")
+object_id = "tas2"
+dialog_key = "tut_tas"
+gives_evidence = true
+evidence_id = "TAS_TUT"
+evidence_name = "Tas"
+evidence_desc = "Tas"
+evidence_icon = ExtResource("7_mhlsa")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TutTas" unique_id=1236433022]
+z_index = 4096
+position = Vector2(794, 397)
+shape = SubResource("CircleShape2D_tospq")
+
+[node name="Lex" parent="." unique_id=370186350 instance=ExtResource("4_fenkg")]
+z_index = -1
+position = Vector2(1015, 253)
+scale = Vector2(2, 2)
+
+[node name="Music" type="AudioStreamPlayer" parent="." unique_id=314108258]
+stream = ExtResource("8_l2k66")
+autoplay = true

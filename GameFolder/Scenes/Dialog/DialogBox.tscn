@@ -1,0 +1,72 @@
+[gd_scene format=3 uid="uid://c5lond6yefded"]
+
+[ext_resource type="Script" uid="uid://bal3jd71ib1cv" path="res://Scripts/Dialogs/DialogBox.gd" id="1_s2f1l"]
+[ext_resource type="FontFile" uid="uid://c7e0hc7nwg81l" path="res://Fonts/PixelOperatorMono8-Bold.ttf" id="2_e8js1"]
+[ext_resource type="FontFile" uid="uid://caoeldbjrqlt1" path="res://Fonts/PixelOperator-Bold.ttf" id="3_huqhc"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s2f1l"]
+bg_color = Color(0, 0, 0, 0.5176471)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 1
+border_color = Color(1, 1, 1, 1)
+
+[node name="DialogBox" type="CanvasLayer" unique_id=1245057767]
+script = ExtResource("1_s2f1l")
+
+[node name="Panel" type="Panel" parent="." unique_id=1783140103]
+anchors_preset = -1
+anchor_top = 0.703
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1.0
+offset_top = 3.8399963
+offset_right = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_s2f1l")
+
+[node name="NameLabel" type="Label" parent="Panel" unique_id=366512038]
+layout_mode = 1
+offset_left = 11.0
+offset_top = 10.0
+offset_right = 51.0
+offset_bottom = 33.0
+theme_override_fonts/font = ExtResource("2_e8js1")
+theme_override_font_sizes/font_size = 32
+
+[node name="TextLabel" type="Label" parent="Panel" unique_id=427321677]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_huqhc")
+theme_override_font_sizes/font_size = 24
+
+[node name="Next" type="Button" parent="Panel" unique_id=1977744947]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.98100007
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -118.68005
+offset_top = -332.0
+offset_right = -28.0
+offset_bottom = -223.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_font_sizes/font_size = 32
+text = "NEXT"
+
+[connection signal="pressed" from="Panel/Next" to="." method="_on_next_pressed"]

@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://def3sropsuic4"]
+
+[ext_resource type="Script" uid="uid://cb87w34rskbrg" path="res://Scripts/Dialogs/NotificationSystem.gd" id="1_tqeiu"]
+[ext_resource type="FontFile" uid="uid://duq68hb7m6ngs" path="res://Fonts/PixelOperator.ttf" id="2_lmo4v"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tqeiu"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[node name="NotificationSystem" type="CanvasLayer" unique_id=102632273]
+script = ExtResource("1_tqeiu")
+
+[node name="Panel" type="Panel" parent="." unique_id=891306748]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_tqeiu")
+
+[node name="NotifLabel" type="Label" parent="Panel" unique_id=813680882]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -40.0
+offset_top = -23.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("2_lmo4v")
+theme_override_font_sizes/font_size = 32

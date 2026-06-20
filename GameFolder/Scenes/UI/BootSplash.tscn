@@ -1,0 +1,102 @@
+[gd_scene format=3 uid="uid://deqylko3x8yl7"]
+
+[ext_resource type="Texture2D" uid="uid://dnjlusvu107it" path="res://Assets/Logo/LogoYPPSB.png" id="1_n5c3u"]
+[ext_resource type="Script" uid="uid://bxh4fvhhq1h1r" path="res://Scripts/UI/boot_splash.gd" id="1_nohhx"]
+[ext_resource type="Texture2D" uid="uid://c7fqf4ea8yngp" path="res://Assets/Logo/EastKalimantan.png" id="2_nohhx"]
+[ext_resource type="Texture2D" uid="uid://bwak1ojjjyc8j" path="res://Assets/Logo/KejaksaanTinggi.png" id="3_gb84o"]
+[ext_resource type="FontFile" uid="uid://c7e0hc7nwg81l" path="res://Fonts/PixelOperatorMono8-Bold.ttf" id="5_r06ey"]
+[ext_resource type="FontFile" uid="uid://b6oi1lxlwbxgc" path="res://Fonts/PixelOperator8-Bold.ttf" id="6_wvwx7"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_r06ey"]
+bg_color = Color(0, 0, 0, 1)
+
+[node name="Bootsplash" type="Control" unique_id=809105232]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_nohhx")
+
+[node name="Panel" type="Panel" parent="." unique_id=339743430]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_r06ey")
+
+[node name="TextureRect" type="TextureRect" parent="Panel" unique_id=1442382844]
+layout_mode = 0
+offset_left = 803.0
+offset_top = 77.0
+offset_right = 1315.0
+offset_bottom = 589.0
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_n5c3u")
+
+[node name="TextureRect2" type="TextureRect" parent="Panel" unique_id=313000223]
+layout_mode = 0
+offset_left = 587.0
+offset_top = 69.00001
+offset_right = 1867.0
+offset_bottom = 1634.0
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("2_nohhx")
+stretch_mode = 2
+
+[node name="TextureRect3" type="TextureRect" parent="Panel" unique_id=2129880856]
+layout_mode = 0
+offset_left = 342.0
+offset_top = 67.0
+offset_right = 1713.0
+offset_bottom = 1632.0
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("3_gb84o")
+
+[node name="Label" type="Label" parent="." unique_id=1225391445]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -288.0
+offset_top = -8.0
+offset_right = 288.0
+offset_bottom = 56.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("5_r06ey")
+theme_override_font_sizes/font_size = 64
+text = "DPSH 2026"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1759559647]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -168.0
+offset_top = 176.0
+offset_right = 168.0
+offset_bottom = 228.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label2" type="Label" parent="VBoxContainer" unique_id=2029247800]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("6_wvwx7")
+theme_override_font_sizes/font_size = 24
+text = "SMA PRIMA YPPSB"
+horizontal_alignment = 1
+
+[node name="Label3" type="Label" parent="VBoxContainer" unique_id=227067461]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("6_wvwx7")
+theme_override_font_sizes/font_size = 24
+text = "Kutai Timur"
+horizontal_alignment = 1

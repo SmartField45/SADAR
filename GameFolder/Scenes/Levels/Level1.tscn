@@ -1,0 +1,165 @@
+[gd_scene format=3 uid="uid://bhya0lggc83w8"]
+
+[ext_resource type="Script" uid="uid://btpg8qmc4kw1j" path="res://Scripts/Levels/Level1.gd" id="1_5jgm0"]
+[ext_resource type="Texture2D" uid="uid://brlhdgg72i8b8" path="res://Assets/Classroom/Classroom_001.png" id="2_kri6y"]
+[ext_resource type="FontFile" uid="uid://c7e0hc7nwg81l" path="res://Fonts/PixelOperatorMono8-Bold.ttf" id="3_4d3fe"]
+[ext_resource type="Script" uid="uid://d2ofrfw3xskrp" path="res://Scripts/Dialogs/ClickableObject.gd" id="3_kri6y"]
+[ext_resource type="FontFile" uid="uid://duq68hb7m6ngs" path="res://Fonts/PixelOperator.ttf" id="3_xvio3"]
+[ext_resource type="Texture2D" uid="uid://pfxncj2n5lhk" path="res://Assets/Sprite/Paper/Paper_001.png" id="6_jcebb"]
+[ext_resource type="Texture2D" uid="uid://yj1bbhd3ffhl" path="res://Assets/Sprite/Phone/Phone_001.png" id="7_f3nwb"]
+[ext_resource type="Texture2D" uid="uid://c1n0nosd22dsr" path="res://Assets/Sprite/Photo/Photo_001.png" id="8_57lp3"]
+[ext_resource type="Texture2D" uid="uid://byceu3o63qwx8" path="res://Assets/Sprite/Backpack/Backpack_001.png" id="9_n5ptj"]
+[ext_resource type="PackedScene" uid="uid://bmornacepo3on" path="res://Scenes/Character/lex.tscn" id="10_f3nwb"]
+[ext_resource type="AudioStream" uid="uid://b2hab4fwl52cu" path="res://Audio/Music/Conexhon - Where We Begin.mp3" id="11_57lp3"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xvio3"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(1, 1, 1, 1)
+expand_margin_left = 8.0
+expand_margin_top = 8.0
+expand_margin_right = 8.0
+expand_margin_bottom = 8.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kri6y"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(1, 1, 1, 1)
+expand_margin_left = 8.0
+expand_margin_top = 8.0
+expand_margin_right = 8.0
+expand_margin_bottom = 8.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_4d3fe"]
+radius = 43.737854
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_3ipdw"]
+radius = 26.925823
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4d3fe"]
+size = Vector2(93, 323.5)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_jcebb"]
+radius = 37.215588
+
+[node name="Level1" type="Node2D" unique_id=1760154547]
+script = ExtResource("1_5jgm0")
+
+[node name="Panel" type="TextureRect" parent="." unique_id=1674130067]
+offset_right = 320.0
+offset_bottom = 256.0
+scale = Vector2(4, 4)
+texture = ExtResource("2_kri6y")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1367107808]
+
+[node name="InvestigateHint" type="Label" parent="CanvasLayer" unique_id=136524616]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -40.0
+offset_bottom = 23.0
+grow_horizontal = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("3_xvio3")
+theme_override_font_sizes/font_size = 24
+
+[node name="ConfrontButton" type="Button" parent="CanvasLayer" unique_id=1036882351]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -612.0
+offset_top = 22.0
+offset_right = -428.0
+offset_bottom = 46.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_4d3fe")
+theme_override_styles/normal = SubResource("StyleBoxFlat_xvio3")
+theme_override_styles/hover = SubResource("StyleBoxFlat_kri6y")
+text = "CONFRONT"
+
+[node name="MejaAndi" type="Area2D" parent="." unique_id=1436038217]
+z_index = 1
+position = Vector2(902, 483)
+script = ExtResource("3_kri6y")
+object_id = "meja_andi"
+dialog_key = "clue_meja_andi"
+gives_evidence = true
+evidence_id = "catatan_anon"
+evidence_name = "Catatan"
+evidence_desc = "Catatan dari seorang anonimus"
+evidence_icon = ExtResource("6_jcebb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MejaAndi" unique_id=1520777424]
+z_index = 1
+shape = SubResource("CircleShape2D_4d3fe")
+
+[node name="Handphone" type="Area2D" parent="." unique_id=282238432]
+z_index = 1
+script = ExtResource("3_kri6y")
+object_id = "hp_bukti"
+dialog_key = "clue_hp_bukti"
+gives_evidence = true
+evidence_id = "screenshoot_wa"
+evidence_name = "Handphone"
+evidence_desc = "Disini, ada nama akun anonim yang kucari-cari"
+evidence_icon = ExtResource("7_f3nwb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Handphone" unique_id=524344982]
+z_index = 1
+position = Vector2(301, 697)
+shape = SubResource("CircleShape2D_3ipdw")
+
+[node name="PapanKelas" type="Area2D" parent="." unique_id=578148902]
+z_index = 1
+script = ExtResource("3_kri6y")
+object_id = "papan_kelas"
+dialog_key = "clue_papan"
+gives_evidence = true
+evidence_id = "foto_cetak"
+evidence_name = "Foto Cetak"
+evidence_desc = "Fotonya dira terpampang jelas disini, mainnya kejauhan"
+evidence_icon = ExtResource("8_57lp3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PapanKelas" unique_id=1866381527]
+z_index = 1
+position = Vector2(49, 749.75)
+shape = SubResource("RectangleShape2D_4d3fe")
+
+[node name="RivaldiBackPack" type="Area2D" parent="." unique_id=1005753423]
+z_index = 1
+position = Vector2(792, 396)
+script = ExtResource("3_kri6y")
+object_id = "tas_rivaldi"
+dialog_key = "clue_tas"
+gives_evidence = true
+evidence_id = "sticker_tas"
+evidence_name = "Tas"
+evidence_desc = "Tas merah, milik rivaldi. Tentu saja..."
+evidence_icon = ExtResource("9_n5ptj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RivaldiBackPack" unique_id=381213555]
+z_index = 1
+position = Vector2(-4, 2)
+shape = SubResource("CircleShape2D_jcebb")
+
+[node name="Lex" parent="." unique_id=370186350 instance=ExtResource("10_f3nwb")]
+position = Vector2(1015, 253)
+scale = Vector2(2, 2)
+
+[node name="Music" type="AudioStreamPlayer" parent="." unique_id=544334936]
+stream = ExtResource("11_57lp3")
+autoplay = true

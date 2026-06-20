@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://dd7o3c4y33xvo"]
+
+[ext_resource type="FontFile" uid="uid://c7e0hc7nwg81l" path="res://Fonts/PixelOperatorMono8-Bold.ttf" id="1_rvawm"]
+[ext_resource type="FontFile" uid="uid://duq68hb7m6ngs" path="res://Fonts/PixelOperator.ttf" id="2_leoim"]
+
+[node name="SummaryCard" type="Control" unique_id=557527439]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=949587334]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="HeaderLabel" type="Label" parent="VBoxContainer" unique_id=1126791560]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_rvawm")
+theme_override_font_sizes/font_size = 32
+horizontal_alignment = 1
+
+[node name="DateLabel" type="Label" parent="VBoxContainer" unique_id=211707195]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_leoim")
+theme_override_font_sizes/font_size = 16
+horizontal_alignment = 1
+
+[node name="JusticeLabel" type="Label" parent="VBoxContainer" unique_id=1684440351]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_leoim")
+theme_override_font_sizes/font_size = 16
+horizontal_alignment = 1
+
+[node name="VerdictLabel" type="Label" parent="VBoxContainer" unique_id=1667413977]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_leoim")
+theme_override_font_sizes/font_size = 8
+horizontal_alignment = 1

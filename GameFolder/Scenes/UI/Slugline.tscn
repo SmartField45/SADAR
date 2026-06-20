@@ -1,0 +1,56 @@
+[gd_scene format=3 uid="uid://coj3e8gssx8qu"]
+
+[ext_resource type="Script" uid="uid://dgiawvyaac3jp" path="res://Scripts/UI/slugline.gd" id="1_qevmw"]
+[ext_resource type="FontFile" uid="uid://c7e0hc7nwg81l" path="res://Fonts/PixelOperatorMono8-Bold.ttf" id="2_ioyck"]
+[ext_resource type="AudioStream" uid="uid://bfxk4mcibpkm4" path="res://Audio/SFX/freesound_community-thump-87726.mp3" id="2_pofqq"]
+[ext_resource type="FontFile" uid="uid://3300ujhlf2fv" path="res://Fonts/PixelOperatorMono-Bold.ttf" id="3_gcwan"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3ofxp"]
+bg_color = Color(0, 0, 0, 1)
+
+[node name="Slugline" type="Control" unique_id=232963260]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_qevmw")
+
+[node name="Panel" type="Panel" parent="." unique_id=392589221]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_3ofxp")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel" unique_id=1749299868]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -25.0
+offset_right = 20.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="LabelChapter" type="Label" parent="Panel/VBoxContainer" unique_id=575054531]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_ioyck")
+theme_override_font_sizes/font_size = 64
+
+[node name="LabelTitle" type="Label" parent="Panel/VBoxContainer" unique_id=1575519329]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_gcwan")
+theme_override_font_sizes/font_size = 32
+horizontal_alignment = 1
+
+[node name="SFX" type="AudioStreamPlayer2D" parent="." unique_id=1075601895]
+stream = ExtResource("2_pofqq")
+bus = &"SFX"

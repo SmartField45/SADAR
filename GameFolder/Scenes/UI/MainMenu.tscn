@@ -1,0 +1,309 @@
+[gd_scene format=3 uid="uid://5i3qrmxeiod6"]
+
+[ext_resource type="Texture2D" uid="uid://bdmsah41fu3tv" path="res://Assets/Sprite/ryan-haight-uw-spring.jpg" id="1_g18y6"]
+[ext_resource type="Script" uid="uid://fywbq7e13xit" path="res://Scripts/UI/main_menu.gd" id="1_mjmdf"]
+[ext_resource type="FontFile" uid="uid://c7e0hc7nwg81l" path="res://Fonts/PixelOperatorMono8-Bold.ttf" id="3_72sra"]
+[ext_resource type="Texture2D" uid="uid://fbmm3ltbsw4j" path="res://Assets/Sprite/Game Info/GameInfo_001.png" id="3_hys1s"]
+[ext_resource type="Texture2D" uid="uid://djcskb4h6sa64" path="res://Assets/Button/HomeButton.png" id="4_k8um8"]
+[ext_resource type="FontFile" uid="uid://b6oi1lxlwbxgc" path="res://Fonts/PixelOperator8-Bold.ttf" id="4_m48tj"]
+[ext_resource type="Texture2D" uid="uid://dmbb3regigby0" path="res://Assets/Settings UI/SettingsUI_017.png" id="5_dvisc"]
+[ext_resource type="Texture2D" uid="uid://bha8fyl0oeol7" path="res://Assets/Button/HomeButtonHover.png" id="5_jex3y"]
+[ext_resource type="Texture2D" uid="uid://bukg7dk5qfnag" path="res://Assets/Settings UI/SettingsUI_018.png" id="8_ab04i"]
+[ext_resource type="Texture2D" uid="uid://c1tfll0pqdwui" path="res://Assets/Settings UI/SettingsUI_019.png" id="9_hys1s"]
+[ext_resource type="Texture2D" uid="uid://ceiai8hvhlrey" path="res://Assets/Settings UI/SettingsUI_020.png" id="10_fgqbg"]
+[ext_resource type="Texture2D" uid="uid://cr88l0s72p2kx" path="res://Assets/Button/Button_004.png" id="11_ab04i"]
+[ext_resource type="Texture2D" uid="uid://bpyxdc3434abw" path="res://Assets/Button/Button_004_Hover.png" id="12_hys1s"]
+[ext_resource type="Texture2D" uid="uid://hhdnln3jeea6" path="res://Assets/Logo/PEKA_Logo.png" id="14_fgqbg"]
+[ext_resource type="AudioStream" uid="uid://dm7pxuyi1001d" path="res://Audio/Music/Conexhon - The Road Still Calls.mp3" id="15_euk5f"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hys1s"]
+bg_color = Color(0, 0, 0, 0.654902)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_t6w0q"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+expand_margin_left = 8.0
+expand_margin_top = 8.0
+expand_margin_right = 8.0
+expand_margin_bottom = 8.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_k8um8"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+expand_margin_left = 8.0
+expand_margin_top = 8.0
+expand_margin_right = 8.0
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_euk5f"]
+color = Color(1, 1, 1, 1)
+thickness = 6
+
+[node name="MainMenu" type="Control" unique_id=214338747]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_mjmdf")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1096755657]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_g18y6")
+expand_mode = 2
+
+[node name="Panel" type="Panel" parent="." unique_id=1863093122]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -256.0
+offset_top = 19.0
+offset_right = 256.0
+offset_bottom = 147.0
+grow_horizontal = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_hys1s")
+
+[node name="TextureRect" type="TextureRect" parent="Panel" unique_id=1181083118]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -256.0
+offset_right = 256.0
+offset_bottom = 128.0
+grow_horizontal = 2
+texture = ExtResource("3_hys1s")
+
+[node name="MainButton" type="VBoxContainer" parent="." unique_id=91643194]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -100.0
+offset_top = -52.0
+offset_right = 100.0
+offset_bottom = 52.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 32
+
+[node name="Start" type="Button" parent="MainButton" unique_id=1982188875]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_72sra")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxFlat_t6w0q")
+theme_override_styles/hover = SubResource("StyleBoxFlat_k8um8")
+text = "START"
+
+[node name="Tutorial" type="Button" parent="MainButton" unique_id=1019818742]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_72sra")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxFlat_t6w0q")
+theme_override_styles/hover = SubResource("StyleBoxFlat_k8um8")
+text = "TUTORIAL"
+
+[node name="Settings" type="Button" parent="MainButton" unique_id=280317587]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_72sra")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxFlat_t6w0q")
+theme_override_styles/hover = SubResource("StyleBoxFlat_k8um8")
+text = "SETTINGS"
+
+[node name="Summary" type="Button" parent="MainButton" unique_id=1198954766]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_72sra")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxFlat_t6w0q")
+theme_override_styles/hover = SubResource("StyleBoxFlat_k8um8")
+text = "SUMMARY"
+
+[node name="Quit" type="Button" parent="MainButton" unique_id=1811012041]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_72sra")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxFlat_t6w0q")
+theme_override_styles/hover = SubResource("StyleBoxFlat_k8um8")
+text = "QUIT"
+
+[node name="SettingsPanel" type="Panel" parent="." unique_id=240398808]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -360.0
+offset_top = -240.0
+offset_right = 360.0
+offset_bottom = 240.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="SettingsPanel" unique_id=1321768820]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 18.0
+offset_right = 680.0
+offset_bottom = 42.0
+theme_override_fonts/font = ExtResource("4_m48tj")
+theme_override_font_sizes/font_size = 48
+text = "SETTINGS"
+horizontal_alignment = 1
+
+[node name="SlideContainer" type="VBoxContainer" parent="SettingsPanel" unique_id=643549921]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -240.0
+offset_top = -80.0
+offset_right = 240.0
+offset_bottom = 80.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 32
+
+[node name="SFXSlider" type="HSlider" parent="SettingsPanel/SlideContainer" unique_id=17940491]
+layout_mode = 2
+theme_override_icons/grabber = ExtResource("5_dvisc")
+theme_override_icons/grabber_highlight = ExtResource("5_dvisc")
+theme_override_icons/grabber_disabled = ExtResource("5_dvisc")
+theme_override_styles/slider = SubResource("StyleBoxLine_euk5f")
+
+[node name="MusicSlider" type="HSlider" parent="SettingsPanel/SlideContainer" unique_id=1632687418]
+layout_mode = 2
+theme_override_icons/grabber = ExtResource("5_dvisc")
+theme_override_icons/grabber_highlight = ExtResource("5_dvisc")
+theme_override_icons/grabber_disabled = ExtResource("5_dvisc")
+theme_override_styles/slider = SubResource("StyleBoxLine_euk5f")
+
+[node name="UISlider" type="HSlider" parent="SettingsPanel/SlideContainer" unique_id=1029127333]
+layout_mode = 2
+theme_override_icons/grabber = ExtResource("5_dvisc")
+theme_override_icons/grabber_highlight = ExtResource("5_dvisc")
+theme_override_icons/grabber_disabled = ExtResource("5_dvisc")
+theme_override_styles/slider = SubResource("StyleBoxLine_euk5f")
+
+[node name="SettingsBack" type="TextureButton" parent="SettingsPanel" unique_id=1406723127]
+layout_mode = 0
+offset_left = 320.0
+offset_top = 382.0
+offset_right = 336.0
+offset_bottom = 398.0
+scale = Vector2(4, 4)
+size_flags_horizontal = 4
+texture_normal = ExtResource("4_k8um8")
+texture_hover = ExtResource("5_jex3y")
+
+[node name="TextureRect" type="TextureRect" parent="SettingsPanel" unique_id=226232551]
+layout_mode = 0
+offset_left = 59.0
+offset_top = 155.0
+offset_right = 99.0
+offset_bottom = 195.0
+texture = ExtResource("8_ab04i")
+
+[node name="TextureRect2" type="TextureRect" parent="SettingsPanel" unique_id=190267225]
+layout_mode = 0
+offset_left = 62.0
+offset_top = 221.0
+offset_right = 102.0
+offset_bottom = 261.0
+texture = ExtResource("9_hys1s")
+
+[node name="TextureRect3" type="TextureRect" parent="SettingsPanel" unique_id=849144839]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 284.0
+offset_right = 104.0
+offset_bottom = 324.0
+texture = ExtResource("10_fgqbg")
+
+[node name="Reset" type="TextureButton" parent="." unique_id=579854437]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -100.0
+offset_right = 260.0
+grow_vertical = 0
+texture_normal = ExtResource("11_ab04i")
+texture_hover = ExtResource("12_hys1s")
+
+[node name="TextureRect2" type="TextureRect" parent="." unique_id=219714490]
+layout_mode = 1
+offset_left = 1082.9999
+offset_top = 635.99994
+offset_right = 2844.0
+offset_bottom = 1308.0
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("14_fgqbg")
+
+[node name="LinkButton" type="LinkButton" parent="TextureRect2" unique_id=1030699876]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1980.9991
+offset_top = -791.9996
+offset_right = 219.00085
+offset_bottom = 208.00043
+grow_horizontal = 0
+grow_vertical = 0
+underline = 1
+uri = "https://pendidikankolaboratifantikekerasan.netlify.app"
+
+[node name="Music" type="AudioStreamPlayer" parent="." unique_id=212166971]
+stream = ExtResource("15_euk5f")
+autoplay = true
+bus = &"Music"
+
+[connection signal="pressed" from="MainButton/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="MainButton/Tutorial" to="." method="_on_tutorial_pressed"]
+[connection signal="pressed" from="MainButton/Settings" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="MainButton/Summary" to="." method="_on_summary_pressed"]
+[connection signal="pressed" from="MainButton/Quit" to="." method="_on_quit_pressed"]
+[connection signal="changed" from="SettingsPanel/SlideContainer/SFXSlider" to="." method="_on_sfx_changed"]
+[connection signal="changed" from="SettingsPanel/SlideContainer/MusicSlider" to="." method="_on_music_changed"]
+[connection signal="changed" from="SettingsPanel/SlideContainer/UISlider" to="." method="_on_ui_changed"]
+[connection signal="pressed" from="SettingsPanel/SettingsBack" to="." method="_on_settings_back_pressed"]
+[connection signal="pressed" from="Reset" to="." method="_on_reset_pressed"]

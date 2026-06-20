@@ -1,0 +1,202 @@
+{
+	"Start": {
+	"Name": "Lex",
+	"Text": "RAKAAAAAAA, ADA YANG BUTUH BANTUANMU",
+		"Mood": "Normal",
+		"JusticeMeter": "Normal",
+		"Next": "A"
+	},
+	"A": {
+		"Name": "Lex",
+		"Text": "Namanya Dira. Fotonya dimanipulasi dan disebarkan di grup WA kelas. Sekarang ia tidak mau masuk sekolah.",
+		"Mood": "Sad",
+		"JusticeMeter": "Normal",
+		"Choices": {
+			"Siapa yang melakukan ini?": "A_siapa",
+			"Kenapa ada yang mau melakukan ini?": "A_kenapa"
+		}
+	},
+	"A_siapa": {
+		"Name": "Lex",
+		"Text": "Itulah yang harus kita temukan. Tapi ingat, kita di sini bukan untuk menghancurkan siapapun.",
+		"Mood": "Angry",
+		"JusticeMeter": "Normal",
+		"Next": "B"
+	},
+	"A_kenapa": {
+		"Name": "Lex",
+		"Text": "Pertanyaan yang lebih penting dari 'siapa'. Orang yang menyakiti orang lain... biasanya juga sedang terluka.",
+		"Mood": "Sad",
+		"JusticeMeter": "Increase",
+		"Next": "B"
+	},
+	"B": {
+		"Name": "Lex",
+		"Text": "Kumpulkan buktinya. Titik",
+		"Mood": "Normal",
+		"JusticeMeter": "Normal",
+		"Next": "Tutorial_End"
+	},
+	"Tutorial_End": {
+		"Name": "...",
+		"Text": "Ruang kelas terasa lebih berat dari biasanya. Di suatu tempat di sini, tersembunyi sebuah kebenaran.",
+		"Mood": "Normal",
+		"JusticeMeter": "Normal"
+	},
+
+	"clue_meja_andi": {
+		"Name": "...",
+		"Text": "Secarik kertas terlipat di laci. Tulisan tangan rapi bet tapi penuh coretan kemarahan di pinggirnya.",
+		"Mood": "Normal",
+		"JusticeMeter": "Normal"
+	},
+	"clue_hp_bukti": {
+		"Name": "...",
+		"Text": "HP yang disita guru. Layarnya retak. Riwayat chatnya masih ada, nama akun anonim itu belum dihapus.",
+		"Mood": "Normal",
+		"JusticeMeter": "Normal"
+	},
+	"clue_papan": {
+		"Name": "...",
+		"Text": "Foto itu sudah dicopot. Tapi bekasnya masih ada selotip merek yang sama dengan yang ada di meja pojok belakang.",
+		"Mood": "Normal",
+		"JusticeMeter": "Normal"
+	},
+	"clue_tas": {
+		"Name": "...",
+		"Text": "Di dalam tas ini... printout foto yang sama. Belum sempat dibuang.",
+		"Mood": "Normal",
+		"JusticeMeter": "Normal"
+	},
+	"clue_buku_harian": {
+		"Name": "...",
+		"Text": "Buku catatan. Satu kalimat terbuka di halaman tengah: 'kenapa semua orang lebih suka dia?'",
+		"Mood": "Sad",
+		"JusticeMeter": "Normal"
+	},
+	"clue_sudah": {
+		"Name": "...",
+		"Text": "Sudah kamu periksa.",
+		"Mood": "Normal",
+		"JusticeMeter": "Normal"
+	},
+
+	"Confrontation_Start": {
+		"Name": "Lex",
+		"Text": "Cukup. Kamu sudah tahu jawabannya.",
+		"Mood": "Angry",
+		"JusticeMeter": "Normal",
+		"Next": "Conf_A"
+	},
+	"Conf_A": {
+		"Name": "Rival",
+		"Text": "Aku tidak melakukan apa-apa.",
+		"Mood": "Nervous",
+		"JusticeMeter": "Normal",
+		"Next": "Conf_A2"
+	},
+	"Conf_A2": {
+		"Name": "...",
+		"Text": "Kamu meletakkan bukti-bukti itu satu per satu. Ia tidak bergerak.",
+		"Mood": "Normal",
+		"JusticeMeter": "Normal",
+		"Next": "Conf_A3"
+	},
+	"Conf_A3": {
+		"Name": "Rival",
+		"Text": "...aku tidak tahu kalau akan separah ini.",
+		"Mood": "Sad",
+		"JusticeMeter": "Normal",
+		"Choices": {
+			"'Dira tidak masuk sekolah tiga hari karena ini.'": "Conf_Tegas",
+			"'Kamu melihatnya menangis, kan?'": "Conf_Empati",
+			"'Kenapa kamu melakukan ini?'": "Conf_Tanya"
+		}
+	},
+	"Conf_Tegas": {
+		"Name": "...",
+		"Text": "Suaramu terlalu keras. Ia semakin mengecil. Kamu sadar — menyerang bukan cara yang tepat.",
+		"Mood": "Normal",
+		"JusticeMeter": "Decrease",
+		"Next": "Conf_Final"
+	},
+	"Conf_Empati": {
+		"Name": "Rival",
+		"Text": "Iya. Aku melihatnya. Dan aku pura-pura tidak melihat.",
+		"Mood": "Sad",
+		"JusticeMeter": "Increase",
+		"Next": "Conf_Final"
+	},
+	"Conf_Tanya": {
+		"Name": "Rival",
+		"Text": "Karena aku lelah jadi yang selalu di belakang. Dira selalu dipuji. Dan aku... tidak pernah ada.",
+		"Mood": "Sad",
+		"JusticeMeter": "Increase",
+		"Next": "Conf_Final"
+	},
+	"Conf_Final": {
+		"Name": "Lex",
+		"Text": "Rasa sakitnya nyata. Tapi cara ini salah.",
+		"Mood": "Sad",
+		"JusticeMeter": "Normal",
+		"Choices": {
+			"'Kamu masih bisa memperbaiki ini.'": "Conf_End_Baik",
+			"(Diam. Biarkan ia duduk dengan pikirannya.)": "Conf_End_Diam"
+		}
+	},
+	"Conf_End_Baik": {
+		"Name": "Rival",
+		"Text": "...aku bahkan tidak tahu caranya minta maaf.",
+		"Mood": "Sad",
+		"JusticeMeter": "Increase",
+		"Next": "Conf_End"
+	},
+	"Conf_End_Diam": {
+		"Name": "...",
+		"Text": "Diammu berbicara lebih keras dari kata-kata. Ia akhirnya menunduk.",
+		"Mood": "Normal",
+		"JusticeMeter": "Increase",
+		"Next": "Conf_End"
+	},
+	"Conf_End": {
+		"Name": "Lex",
+		"Text": "Ini bukan akhir. Ini awal dari sesuatu yang lebih sulit — tapi lebih benar.",
+		"Mood": "Normal",
+		"JusticeMeter": "Normal"
+	},
+
+	"Ending_Good": {
+		"Name": "...",
+		"Text": "Dua hari kemudian, Dira masuk sekolah. Ia tidak langsung tersenyum. Tapi ia datang.",
+		"Mood": "Normal",
+		"JusticeMeter": "Normal",
+		"Next": "Ending_Good2"
+	},
+	"Ending_Good2": {
+		"Name": "Lex",
+		"Text": "Keadilan bukan selalu tentang hukuman, Raka. Kadang — cukup membuat seseorang mau melihat dirinya sendiri.",
+		"Mood": "Happy",
+		"JusticeMeter": "Normal"
+	},
+
+	"Ending_Bad": {
+		"Name": "...",
+		"Text": "Ia pergi dengan membanting kursi. Keesokan harinya — foto itu menyebar lagi. Lebih buruk.",
+		"Mood": "Sad",
+		"JusticeMeter": "Normal",
+		"Next": "Ending_Bad2"
+	},
+	"Ending_Bad2": {
+		"Name": "Lex",
+		"Text": "Kita terlalu keras. Ia merasa terdesak dan melawan. Dira yang menanggung akibatnya.",
+		"Mood": "Sad",
+		"JusticeMeter": "Normal",
+		"Next": "Ending_Bad3"
+	},
+	"Ending_Bad3": {
+		"Name": "Lex",
+		"Text": "Kita masih bisa memperbaiki ini. Tapi dengan cara yang berbeda.",
+		"Mood": "Nervous",
+		"JusticeMeter": "Normal"
+	}
+}

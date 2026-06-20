@@ -1,0 +1,107 @@
+[gd_scene format=3 uid="uid://crochwqv1i5wj"]
+
+[ext_resource type="Script" uid="uid://lets4h6okjf7" path="res://Scripts/UI/summary_screen.gd" id="1_hq4uy"]
+[ext_resource type="FontFile" uid="uid://b6oi1lxlwbxgc" path="res://Fonts/PixelOperator8-Bold.ttf" id="2_i5qs2"]
+[ext_resource type="Texture2D" uid="uid://d328pyteahef4" path="res://Assets/Sprite/PixelArtBG.jpg" id="2_qn0lt"]
+[ext_resource type="FontFile" uid="uid://youk32vbyqkr" path="res://Fonts/PixelOperator8.ttf" id="2_rcht6"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qn0lt"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xuq8p"]
+bg_color = Color(1, 1, 1, 1)
+
+[node name="SummaryScreen" type="Control" unique_id=1521467]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_hq4uy")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1984714739]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_qn0lt")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=2037732417]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -45.5
+offset_top = -96.5
+offset_right = 45.5
+offset_bottom = 96.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 16
+
+[node name="TitleLabel" type="Label" parent="VBoxContainer" unique_id=1402292087]
+layout_mode = 2
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("2_i5qs2")
+theme_override_font_sizes/font_size = 24
+horizontal_alignment = 1
+
+[node name="SubtitleLabel" type="Label" parent="VBoxContainer" unique_id=594959436]
+layout_mode = 2
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("2_i5qs2")
+theme_override_font_sizes/font_size = 24
+horizontal_alignment = 1
+
+[node name="DateLabel" type="Label" parent="VBoxContainer" unique_id=232476218]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("2_rcht6")
+theme_override_font_sizes/font_size = 16
+horizontal_alignment = 1
+
+[node name="JusticeLabel" type="Label" parent="VBoxContainer" unique_id=1232928474]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("2_rcht6")
+theme_override_font_sizes/font_size = 16
+horizontal_alignment = 1
+
+[node name="EndingLabel" type="Label" parent="VBoxContainer" unique_id=364133877]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("2_rcht6")
+theme_override_font_sizes/font_size = 16
+horizontal_alignment = 1
+
+[node name="EvidenceList" type="VBoxContainer" parent="VBoxContainer" unique_id=1523928397]
+layout_mode = 2
+
+[node name="VerdictLabel" type="Label" parent="VBoxContainer" unique_id=1945665546]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("2_rcht6")
+theme_override_font_sizes/font_size = 16
+horizontal_alignment = 1
+
+[node name="ContinueButton" type="Button" parent="VBoxContainer" unique_id=1199450295]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.875, 0.875, 0.875, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_qn0lt")
+theme_override_styles/hover = SubResource("StyleBoxFlat_xuq8p")
+text = "CONTINUE"

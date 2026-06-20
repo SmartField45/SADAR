@@ -1,0 +1,162 @@
+[gd_scene format=3 uid="uid://bq3k1l5fc7mvo"]
+
+[ext_resource type="Texture2D" uid="uid://bvurje5cvagrh" path="res://Assets/Sprite/PalmerLake.jpg" id="1_0ryud"]
+[ext_resource type="Script" uid="uid://bmphnxnnv03ma" path="res://Scripts/Levels/level_2.gd" id="1_smuj1"]
+[ext_resource type="FontFile" uid="uid://duq68hb7m6ngs" path="res://Fonts/PixelOperator.ttf" id="3_5iseo"]
+[ext_resource type="Texture2D" uid="uid://dkwg1gr4yhcf8" path="res://Assets/Sprite/Bottle/Bottle_001.png" id="3_lmdar"]
+[ext_resource type="FontFile" uid="uid://c7e0hc7nwg81l" path="res://Fonts/PixelOperatorMono8-Bold.ttf" id="4_4rk67"]
+[ext_resource type="Texture2D" uid="uid://by28yd2ijm8l" path="res://Assets/Sprite/Paper/Paper_003.png" id="4_d1swa"]
+[ext_resource type="Texture2D" uid="uid://pvhwg3g0x4nm" path="res://Assets/Sprite/Paper/Paper_002.png" id="5_ipaot"]
+[ext_resource type="Script" uid="uid://d2ofrfw3xskrp" path="res://Scripts/Dialogs/ClickableObject.gd" id="8_ao4h1"]
+[ext_resource type="PackedScene" uid="uid://bmornacepo3on" path="res://Scenes/Character/lex.tscn" id="9_d1swa"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_f8qf7"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(1, 1, 1, 1)
+expand_margin_left = 8.0
+expand_margin_top = 8.0
+expand_margin_right = 8.0
+expand_margin_bottom = 8.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lmdar"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(1, 1, 1, 1)
+expand_margin_left = 8.0
+expand_margin_top = 8.0
+expand_margin_right = 8.0
+expand_margin_bottom = 8.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ngp1c"]
+radius = 30.066593
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_u5eb6"]
+radius = 33.24154
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_tbiw2"]
+radius = 29.017237
+
+[node name="Level2" type="Node2D" unique_id=1940818905]
+script = ExtResource("1_smuj1")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=671874266]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 3.0
+offset_top = -305.0
+offset_right = 1283.0
+offset_bottom = 719.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_0ryud")
+
+[node name="TextureRect2" type="TextureRect" parent="." unique_id=612692086]
+offset_left = 520.0
+offset_top = 632.0
+offset_right = 560.0
+offset_bottom = 672.0
+texture = ExtResource("3_lmdar")
+
+[node name="TextureRect3" type="TextureRect" parent="." unique_id=54634445]
+offset_left = 257.0
+offset_top = 534.0
+offset_right = 297.0
+offset_bottom = 574.0
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("4_d1swa")
+
+[node name="TextureRect4" type="TextureRect" parent="." unique_id=1727668870]
+offset_left = 1085.0
+offset_top = 633.00006
+offset_right = 1125.0
+offset_bottom = 673.00006
+rotation = -0.7853982
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("5_ipaot")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1494139640]
+
+[node name="InvestigateHint" type="Label" parent="CanvasLayer" unique_id=1717676805]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -40.0
+offset_bottom = 23.0
+grow_horizontal = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("3_5iseo")
+theme_override_font_sizes/font_size = 24
+
+[node name="ConfrontButton" type="Button" parent="CanvasLayer" unique_id=1960786121]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -612.0
+offset_top = 22.0
+offset_right = -428.0
+offset_bottom = 46.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_4rk67")
+theme_override_styles/normal = SubResource("StyleBoxFlat_f8qf7")
+theme_override_styles/hover = SubResource("StyleBoxFlat_lmdar")
+text = "CONFRONT"
+
+[node name="Botol" type="Area2D" parent="." unique_id=459873268]
+script = ExtResource("8_ao4h1")
+object_id = "botol_1"
+dialog_key = "clue_semak_dermaga"
+gives_evidence = true
+evidence_id = "Botol"
+evidence_name = "Botol Minum"
+evidence_desc = "Didalam sini... ada bau obat batuk... sangat kuat..."
+evidence_icon = ExtResource("3_lmdar")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Botol" unique_id=1139881776]
+position = Vector2(539, 655)
+shape = SubResource("CircleShape2D_ngp1c")
+
+[node name="PaperBag" type="Area2D" parent="." unique_id=107694566]
+script = ExtResource("8_ao4h1")
+object_id = "PaperBag_1"
+dialog_key = "clue_batu_bawah"
+gives_evidence = true
+evidence_id = "PaperBag"
+evidence_name = "Paper Bag"
+evidence_desc = "Resep dokter palsu? menarik..."
+evidence_icon = ExtResource("4_d1swa")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PaperBag" unique_id=766918243]
+position = Vector2(267, 541)
+shape = SubResource("CircleShape2D_u5eb6")
+
+[node name="Struk" type="Area2D" parent="." unique_id=1956874201]
+script = ExtResource("8_ao4h1")
+object_id = "Struk_1"
+dialog_key = "clue_lumpur_jejak"
+gives_evidence = true
+evidence_id = "Struk"
+evidence_name = "Struk Pembelian"
+evidence_desc = "10 Strip obat anti-mabuk,  dipake untuk mabuk? menyedihkan"
+evidence_icon = ExtResource("5_ipaot")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Struk" unique_id=1539624439]
+position = Vector2(1099, 633)
+shape = SubResource("CircleShape2D_tbiw2")
+
+[node name="Lex" parent="." unique_id=370186350 instance=ExtResource("9_d1swa")]
+position = Vector2(1116, 386)

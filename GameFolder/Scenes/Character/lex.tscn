@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://bmornacepo3on"]
+
+[ext_resource type="Script" uid="uid://btewun7rviktg" path="res://Scripts/Character/lex.gd" id="1_e4a31"]
+[ext_resource type="Texture2D" uid="uid://vlkb356rly4w" path="res://Assets/Character/Lex/Lex_001.png" id="2_uyw1t"]
+[ext_resource type="Texture2D" uid="uid://cilwwbv2t7g8f" path="res://Assets/Character/Lex/Lex_002.png" id="3_s0gd7"]
+[ext_resource type="Texture2D" uid="uid://byx6girrymr7x" path="res://Assets/Character/Lex/Lex_003.png" id="4_butmc"]
+[ext_resource type="Texture2D" uid="uid://ckp6gkotglaq4" path="res://Assets/Character/Lex/Lex_004.png" id="5_is1y2"]
+[ext_resource type="Texture2D" uid="uid://dckh8s5lboe2k" path="res://Assets/Character/Lex/Lex_005.png" id="6_tgwbt"]
+
+[node name="Lex" type="Node2D" unique_id=370186350]
+script = ExtResource("1_e4a31")
+sprite_normal = ExtResource("2_uyw1t")
+sprite_happy = ExtResource("3_s0gd7")
+sprite_sad = ExtResource("4_butmc")
+sprite_angry = ExtResource("5_is1y2")
+sprite_nervous = ExtResource("6_tgwbt")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1373749253]
+scale = Vector2(4, 4)

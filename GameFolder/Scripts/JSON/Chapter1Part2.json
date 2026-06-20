@@ -1,0 +1,202 @@
+{
+	"Start": {
+		"Name": "Lex",
+		"Text": "Raka, untung kamu cepat datang. Kita langsung cari bukti di sekitar tepi danau ini sebelum hujan menghapus jejaknya.",
+		"Mood": "Nervous",
+		"JusticeMeter": "Normal",
+		"Next": "A"
+	},
+	"A": {
+		"Name": "Lex",
+		"Text": "Dodi baru saja dilarikan ke rumah sakit setelah ditemukan kejang-kejang di dermaga. Seseorang membuang sisa racikan obatnya ke area ini.",
+		"Mood": "Sad",
+		"JusticeMeter": "Normal",
+		"Choices": {
+			"Mari kita sisir area dermaga dulu.": "A_dermaga",
+			"Siapa yang terakhir kali terlihat bersamanya di sini?": "A_saksi"
+		}
+	},
+	"A_dermaga": {
+		"Name": "Lex",
+		"Text": "Setuju. Di sana tempat nongkrong yang paling tersembunyi. Perhatikan semak-semak di sekitarnya.",
+		"Mood": "Normal",
+		"JusticeMeter": "Normal",
+		"Next": "B"
+	},
+	"A_saksi": {
+		"Name": "Lex",
+		"Text": "Anak-anak bilang Bima yang memapah Dodi sebelum ambulans datang, tapi sekarang Bima malah menghilang.",
+		"Mood": "Angry",
+		"JusticeMeter": "Increase",
+		"Next": "B"
+	},
+	"B": {
+		"Name": "Lex",
+		"Text": "Waktu kita tidak banyak. Cari apa pun yang membuktikan bahwa ini bukan sekadar kecelakaan, tapi ada pengedar racikan obat ilegal di sekolah kita.",
+		"Mood": "Normal",
+		"JusticeMeter": "Normal",
+		"Next": "Level2_End"
+	},
+	"Level2_End": {
+		"Name": "...",
+		"Text": "Angin danau berembun dingin. Di antara riak air dan pepohonan, ada rahasia berbahaya yang sengaja ditenggelamkan.",
+		"Mood": "Normal",
+		"JusticeMeter": "Normal"
+	},
+
+	"clue_semak_dermaga": {
+		"Name": "...",
+		"Text": "Di balik semak dekat dermaga, ditemukan botol kosong obat batuk cair dosis tinggi yang labelnya sengaja dikelupas.",
+		"Mood": "Normal",
+		"JusticeMeter": "Normal"
+	},
+	"clue_tepi_air": {
+		"Name": "...",
+		"Text": "Sebuah gelas plastik terapung di tepi danau. Isinya cairan ungu pekat berbau kimia tajam, sisa ramuan yang bikin 'fly'.",
+		"Mood": "Normal",
+		"JusticeMeter": "Normal"
+	},
+	"clue_lumpur_jejak": {
+		"Name": "...",
+		"Text": "Di tanah berlumpur, ada struk pembelian apotek yang basah. Tertulis pembelian 10 strip obat anti-mabuk yang digerus sebagai campuran.",
+		"Mood": "Normal",
+		"JusticeMeter": "Normal"
+	},
+	"clue_batu_bawah": {
+		"Name": "...",
+		"Text": "Terselip di bawah batu besar: tas kertas berisi resep dokter palsu dengan stempel buram untuk menebus obat penenang.",
+		"Mood": "Normal",
+		"JusticeMeter": "Normal"
+	},
+	"clue_hp_bima": {
+		"Name": "...",
+		"Text": "Sebuah ponsel terjatuh di rumput. Layarnya menyala, menampilkan grup chat 'Farmasi Danau' yang dipimpin akun bernama 'Bima'.",
+		"Mood": "Sad",
+		"JusticeMeter": "Normal"
+	},
+	"clue_sudah": {
+		"Name": "...",
+		"Text": "Sudah kamu periksa.",
+		"Mood": "Normal",
+		"JusticeMeter": "Normal"
+	},
+
+	"Confrontation_Start": {
+		"Name": "Lex",
+		"Text": "Bima, keluar dari balik pohon itu! Kamu tidak bisa lari lagi, semua bukti di danau ini mengarah ke kamu.",
+		"Mood": "Angry",
+		"JusticeMeter": "Normal",
+		"Next": "Conf_A"
+	},
+	"Conf_A": {
+		"Name": "Bima",
+		"Text": "Gua cuma panik! Obat-obat itu legal dibeli di apotek, gua gak jual narkoba! Danau ini tempat umum, siapa aja bisa buang sampah di sini!",
+		"Mood": "Angry",
+		"JusticeMeter": "Normal",
+		"Next": "Conf_A2"
+	},
+	"Conf_A2": {
+		"Name": "...",
+		"Text": "Kamu menjajarkan botol racikan, struk pembelian apotek, dan ponsel yang tertinggal. Bima mundur selangkah hingga menyentuh pagar pembatas.",
+		"Mood": "Normal",
+		"JusticeMeter": "Normal",
+		"Next": "Conf_A3"
+	},
+	"Conf_A3": {
+		"Name": "Bima",
+		"Text": "Dodi yang minta diajarin cara raciknya... katanya dia stres berat karena masalah keluarga. Gua cuma mau bantu.",
+		"Mood": "Nervous",
+		"JusticeMeter": "Normal",
+		"Choices": {
+			"'Mencampur obat keras dan memalsukan resep itu tindakan kriminal, Bima!'": "Conf_Tegas",
+			"'Racikanmu itu hampir membunuh Dodi! Dia sekarang kritis di rumah sakit!'": "Conf_Empati",
+			"'Kenapa harus pakai cara berbahaya ini kalau kamu tahu risikonya?'": "Conf_Tanya"
+		}
+	},
+	"Conf_Tegas": {
+		"Name": "...",
+		"Text": "Gertakanmu membuat Bima semakin defensif. Dia melipat tangan, menolak memberi tahu dari mana dia belajar memalsukan resep.",
+		"Mood": "Normal",
+		"JusticeMeter": "Decrease",
+		"Next": "Conf_Final"
+	},
+	"Conf_Empati": {
+		"Name": "Bima",
+		"Text": "K-kritis..? Gua beneran gak tahu kalau efeknya bakal sefatal ini... gua cuma kepikiran nyari uang jajan dari jualan racikan itu.",
+		"Mood": "Sad",
+		"JusticeMeter": "Increase",
+		"Next": "Conf_Final"
+	},
+	"Conf_Tanya": {
+		"Name": "Bima",
+		"Text": "Karena bahan-bahannya murah dan gampang didapat di apotek biasa. Kami pikir selama bukan sabu atau ganja, itu aman.",
+		"Mood": "Sad",
+		"JusticeMeter": "Increase",
+		"Next": "Conf_Final"
+	},
+	"Conf_Final": {
+		"Name": "Lex",
+		"Text": "Menyalahgunakan obat farmasi dengan dosis ekstrem itu sama saja dengan meracuni teman sendiri.",
+		"Mood": "Sad",
+		"JusticeMeter": "Normal",
+		"Choices": {
+			"'Beri tahu kami di mana sisa bahan racikan yang belum terjual.'": "Conf_End_Baik",
+			"(Diam dan menatapnya, membiarkan rasa bersalah menekan egonya.)": "Conf_End_Diam"
+		}
+	},
+	"Conf_End_Baik": {
+		"Name": "Bima",
+		"Text": "Ada di dalam jok motor gua... masih ada tiga paket pil yang belum sempat diracik. Ambil aja, gua tobat.",
+		"Mood": "Sad",
+		"JusticeMeter": "Increase",
+		"Next": "Conf_End"
+	},
+	"Conf_End_Diam": {
+		"Name": "...",
+		"Text": "Suara ombak danau yang tenang membuat tangisan penyesalan Bima terdengar semakin jelas. Dia akhirnya menyerah.",
+		"Mood": "Normal",
+		"JusticeMeter": "Increase",
+		"Next": "Conf_End"
+	},
+	"Conf_End": {
+		"Name": "Lex",
+		"Text": "Investigasi di danau selesai. Sekarang tugas kita adalah memastikan tidak ada lagi 'paket racikan' yang beredar di sekolah.",
+		"Mood": "Normal",
+		"JusticeMeter": "Normal"
+	},
+
+	"Ending_Good": {
+		"Name": "...",
+		"Text": "Satu minggu kemudian, kondisi Dodi membaik. Area danau kini bersih dari tongkrongan liar setelah Bima membubarkan grup chatnya.",
+		"Mood": "Normal",
+		"JusticeMeter": "Normal",
+		"Next": "Ending_Good2"
+	},
+	"Ending_Good2": {
+		"Name": "Lex",
+		"Text": "Menyelamatkan seseorang dari bahaya zat kimia bukan cuma soal menangkap pelakunya, tapi memutus rantai penyebarannya. Kerja bagus, Raka.",
+		"Mood": "Happy",
+		"JusticeMeter": "Normal"
+	},
+
+	"Ending_Bad": {
+		"Name": "...",
+		"Text": "Bima melempar sisa bukti ke tengah danau lalu kabur. Besoknya, tren racikan maut itu justru menyebar ke sekolah sebelah.",
+		"Mood": "Sad",
+		"JusticeMeter": "Normal",
+		"Next": "Ending_Bad2"
+	},
+	"Ending_Bad2": {
+		"Name": "Lex",
+		"Text": "Kita terlalu menyudutkannya di tepi dermaga tadi, membuat dia panik dan memilih melenyapkan semua barang bukti ke air dalam.",
+		"Mood": "Sad",
+		"JusticeMeter": "Normal",
+		"Next": "Ending_Bad3"
+	},
+	"Ending_Bad3": {
+		"Name": "Lex",
+		"Text": "Kita harus bergegas. Kasus ini meluas dan kita butuh strategi baru untuk melacak pemasok utamanya.",
+		"Mood": "Nervous",
+		"JusticeMeter": "Normal"
+	}
+}

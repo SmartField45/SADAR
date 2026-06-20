@@ -1,0 +1,123 @@
+{
+	"Pre-Start": {
+		"Name": "...",
+		"Text": "Tekan Spasi untuk Lanjut",
+		"Mood": "Normal",
+		"JusticeMeter": "Normal",
+		"Next": "Start"
+	},
+	"Start": {
+		"Name": "Lex",
+		"Text": "Raka. Sebelum kita mulai — ada beberapa hal yang perlu kamu pahami.",
+		"Mood": "Normal",
+		"JusticeMeter": "Normal",
+		"Next": "A"
+	},
+	"A": {
+		"Name": "Lex",
+		"Text": "Kamu bisa memeriksa objek di sekitarmu dengan cara mengkliknya. Setiap objek mungkin menyimpan sesuatu.",
+		"Mood": "Normal",
+		"JusticeMeter": "Normal",
+		"Next": "A2"
+	},
+	"A2": {
+		"Name": "Lex",
+		"Text": "Bukti yang kamu temukan akan tersimpan otomatis. Tekan E untuk membuka folder bukti kapan saja.",
+		"Mood": "Normal",
+		"JusticeMeter": "Normal",
+		"Next": "A3"
+	},
+	"A3": {
+		"Name": "Lex",
+		"Text": "Satu lagi — setiap pilihanmu mempengaruhi Justice Meter. Semakin bijak caramu, semakin baik hasilnya.",
+		"Mood": "Normal",
+		"JusticeMeter": "Normal",
+		"Next": "B"
+	},
+	"B": {
+		"Name": "Lex",
+		"Text": "Siap?",
+		"Mood": "Normal",
+		"JusticeMeter": "Normal",
+		"Choices": {
+			"Siap.": "B_siap",
+			"...boleh dijelaskan lagi?": "B_ulang"
+		}
+	},
+	"B_siap": {
+		"Name": "Lex",
+		"Text": "Bagus. Mari kita mulai.",
+		"Mood": "Happy",
+		"JusticeMeter": "Increase",
+		"Next": "Tutorial_Investigasi"
+	},
+	"B_ulang": {
+		"Name": "Lex",
+		"Text": "Tentu. Klik objek untuk memeriksa. Tekan E untuk folder bukti. Pilihanmu mempengaruhi segalanya. Sekarang — siap.",
+		"Mood": "Normal",
+		"JusticeMeter": "Normal",
+		"Next": "Tutorial_Investigasi"
+	},
+	"Tutorial_Investigasi": {
+		"Name": "...",
+		"Text": "Ini ruangan latihan. Ada beberapa objek yang bisa kamu periksa. Temukan semua buktinya.",
+		"Mood": "Normal",
+		"JusticeMeter": "Normal"
+	},
+	"tut_hp": {
+		"Name": "...",
+		"Text": "Sebuah hp.",
+		"Mood": "Normal",
+		"JusticeMeter": "Normal"
+	},
+	"tut_tas": {
+		"Name": "...",
+		"Text": "tas",
+		"Mood": "Normal",
+		"JusticeMeter": "Normal"
+	},
+	"tut_sudah": {
+		"Name": "...",
+		"Text": "Sudah kamu periksa.",
+		"Mood": "Normal",
+		"JusticeMeter": "Normal"
+	},
+
+	"tut_konfrontasi": {
+		"Name": "Lex",
+		"Text": "Kamu sudah menemukan cukup bukti. Ini saatnya berhadapan.",
+		"Mood": "Serious",
+		"JusticeMeter": "Normal",
+		"Next": "tut_conf_a"
+	},
+	"tut_conf_a": {
+		"Name": "Tersangka",
+		"Text": "Aku tidak melakukan apa-apa.",
+		"Mood": "Nervous",
+		"JusticeMeter": "Normal",
+		"Choices": {
+			"'Ini buktinya.'": "tut_conf_bukti",
+			"'Ceritakan dari sudut pandangmu.'": "tut_conf_dengar"
+		}
+	},
+	"tut_conf_bukti": {
+		"Name": "...",
+		"Text": "Ia melihat bukti-buktinya. Tidak ada yang bisa dibantah.",
+		"Mood": "Normal",
+		"JusticeMeter": "Increase",
+		"Next": "tut_conf_end"
+	},
+	"tut_conf_dengar": {
+		"Name": "Tersangka",
+		"Text": "...kamu mau mendengar? Tidak ada yang pernah mau mendengar.",
+		"Mood": "Sad",
+		"JusticeMeter": "Increase",
+		"Next": "tut_conf_end"
+	},
+	"tut_conf_end": {
+		"Name": "Lex",
+		"Text": "Bagus. Kamu sudah memahami caranya. Sekarang — kasus yang sesungguhnya menunggumu.",
+		"Mood": "Happy",
+		"JusticeMeter": "Normal"
+	}
+}

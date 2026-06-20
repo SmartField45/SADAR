@@ -1,0 +1,78 @@
+[gd_scene format=3 uid="uid://ju7k5ae5lmvm"]
+
+[ext_resource type="Script" uid="uid://cfyjte7p6ns05" path="res://Scripts/UI/summary_history.gd" id="1_j5och"]
+[ext_resource type="PackedScene" uid="uid://dd7o3c4y33xvo" path="res://Scenes/UI/SummaryCard.tscn" id="2_57qms"]
+[ext_resource type="FontFile" uid="uid://c7e0hc7nwg81l" path="res://Fonts/PixelOperatorMono8-Bold.ttf" id="2_udfyo"]
+[ext_resource type="Texture2D" uid="uid://d328pyteahef4" path="res://Assets/Sprite/PixelArtBG.jpg" id="3_2yqck"]
+[ext_resource type="Texture2D" uid="uid://djcskb4h6sa64" path="res://Assets/Button/HomeButton.png" id="3_57qms"]
+[ext_resource type="Texture2D" uid="uid://bha8fyl0oeol7" path="res://Assets/Button/HomeButtonHover.png" id="4_2yqck"]
+
+[node name="SummaryHistory" type="Control" unique_id=1176898230]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_j5och")
+summary_card_scene = ExtResource("2_57qms")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=544415095]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_2yqck")
+
+[node name="CanvasModulate" type="Panel" parent="." unique_id=1801410318]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TitleLabel" type="Label" parent="." unique_id=157225446]
+layout_mode = 0
+offset_left = 160.0
+offset_top = 30.0
+offset_right = 1120.0
+offset_bottom = 94.0
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("2_udfyo")
+theme_override_font_sizes/font_size = 64
+text = "SUMMARY HISTORY"
+
+[node name="Back" type="TextureButton" parent="." unique_id=656450483]
+layout_mode = 0
+offset_right = 16.0
+offset_bottom = 16.0
+scale = Vector2(4, 4)
+texture_normal = ExtResource("3_57qms")
+texture_hover = ExtResource("4_2yqck")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="." unique_id=1071430606]
+custom_minimum_size = Vector2(800, 400)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -256.0
+offset_top = -200.0
+offset_right = 256.0
+offset_bottom = 200.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+
+[node name="SummaryList" type="VBoxContainer" parent="ScrollContainer" unique_id=1438638211]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 128
+
+[connection signal="pressed" from="Back" to="." method="_on_back_pressed"]

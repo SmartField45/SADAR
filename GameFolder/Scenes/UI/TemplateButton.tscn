@@ -1,0 +1,53 @@
+[gd_scene format=3 uid="uid://cs55jbjvh8y7g"]
+
+[ext_resource type="FontFile" uid="uid://dxt5j4xlror8f" path="res://Fonts/PixelOperatorHB.ttf" id="1_4qomm"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4qomm"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5kemi"]
+bg_color = Color(0.5629578, 0.56295776, 0.56295776, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3aoj0"]
+bg_color = Color(0.6, 0.6, 0.6, 0.7647059)
+
+[node name="TemplateButton" type="Button" unique_id=288359236]
+custom_minimum_size = Vector2(200, 80)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+theme_override_styles/normal = SubResource("StyleBoxFlat_4qomm")
+theme_override_styles/hover = SubResource("StyleBoxFlat_5kemi")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_3aoj0")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1748190797]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -25.0
+offset_right = 20.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="TitleLabel" type="Label" parent="VBoxContainer" unique_id=1875759853]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("1_4qomm")
+theme_override_font_sizes/font_size = 24
+horizontal_alignment = 1
+
+[node name="SubtitleLabel" type="Label" parent="VBoxContainer" unique_id=1334348173]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.94938904, 0.94938916, 0.9493888, 1)
+theme_override_fonts/font = ExtResource("1_4qomm")
+theme_override_font_sizes/font_size = 16
+horizontal_alignment = 1
