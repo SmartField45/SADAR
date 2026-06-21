@@ -59,7 +59,10 @@ This game is a mon-commercial product by Tim B - Duta Pelajar Sadar Hukum.
 * Muhammad Hani Ilma Alfarabi - Lead Developer, Programmer & Game Design, Artist & Visual Assets.
 * Conexhon - Third Party Music Artist
 
-
+---
+  
+## Download
+[Download](https://smartfield45.itch.io/sadar)
 
 ---
 
