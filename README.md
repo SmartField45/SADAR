@@ -1,11 +1,11 @@
 # SADAR
-Tim B - Duta Pelajar Sadar Hukum
+Developed by Estuary Interactive
 
 ## Description
 Simulator aksi dan edukasi hukum remaja (SADAR) adalah game Open-Source dengan Genre Visual Novel.
 Disini, pengguna bisa mensimulasikan proses investigasi serta pengambilan keputusan yang mempengaruhi akhir sebuah game.
 
-Terdpaat fitur mencari barang, evidence folder, dan riwayat permainan.
+Terdapat fitur mencari barang, evidence folder, dan riwayat permainan.
 
 ---
 
@@ -66,4 +66,4 @@ This game is a mon-commercial product by Tim B - Duta Pelajar Sadar Hukum.
 
 ---
 
-© 2026 Tim B - Duta Pelajar Sadar Hukum. MIT License.
+© 2026 Estuary Interactive. MIT License.
